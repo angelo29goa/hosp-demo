@@ -1,0 +1,10 @@
+com\hospdemo\repo\ExamRepository.class
+com\hospdemo\HospDemoApplication.class
+com\hospdemo\model\Exam.class
+com\hospdemo\model\Hospital.class
+com\hospdemo\model\Patient.class
+com\hospdemo\repo\HospitalRepository.class
+com\hospdemo\model\Customer.class
+com\hospdemo\controller\WebController.class
+com\hospdemo\repo\CustomerRepository.class
+com\hospdemo\repo\PatientRepository.class

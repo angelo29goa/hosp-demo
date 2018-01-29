@@ -1,0 +1,17 @@
+
+<div class="row">
+	<span>exams for patient {{selectedPatient.firstname}}</span>
+</div>
+<div class="row">
+	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+		ng-repeat="exam in exams">
+		<div class="thumbnail hospdiv {{exam.selected}}">
+			<div class="module-body">
+				<div ng-click="onExamSelect(patient)">
+					<b>{{exam.name}} - {{exam.type}}</b><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

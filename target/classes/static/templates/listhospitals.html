@@ -1,0 +1,15 @@
+<div class="row">
+	<span>List of Hospitals are</span>
+</div>
+<div class="row">
+	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+		ng-repeat="hospital in hospitals">
+		<div class="thumbnail hospdiv {{hospital.selected}}">
+			<div class="module-body">
+				<div ng-click="onHospitalSelect(hospital)">
+					<b>{{hospital.name}} - {{hospital.address}}</b><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
