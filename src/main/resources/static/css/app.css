@@ -33,3 +33,21 @@
 .icon-white {
     color: white;
 }
+
+.selected {
+    border-color: #0098d6;     
+    background-color: #88d5ee;
+}
+.hospdiv{
+	display: inline-block;
+    width: 200px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 3px;
+    margin-bottom: 8px;
+    border : 2px solid #e1e1e1;
+}
+.hospdiv:hover{
+	 background-color: #d5f0f9;
+}
