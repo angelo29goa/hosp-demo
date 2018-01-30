@@ -1,7 +1,6 @@
 package com.hospdemo.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,19 +10,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hospdemo.model.Customer;
 import com.hospdemo.model.Exam;
 import com.hospdemo.model.Hospital;
 import com.hospdemo.model.Patient;
-import com.hospdemo.repo.CustomerRepository;
 import com.hospdemo.repo.ExamRepository;
 import com.hospdemo.repo.HospitalRepository;
 import com.hospdemo.repo.PatientRepository;
 
 @RestController
 public class WebController {
-	@Autowired
-	CustomerRepository repository;
 	@Autowired
 	ExamRepository examRepo;
 	
@@ -32,21 +27,6 @@ public class WebController {
 	
 	@Autowired
 	HospitalRepository hospRepo;
-	
-	@RequestMapping("/save")
-	public String process(){
-		// save a single Customer
-		repository.save(new Customer("Jack1", "Smith1"));
-		hospRepo.save(new Hospital("Manipal", "BLR", "Operating"));
-		
-		
-		// save a list of Customers
-		repository.save(Arrays.asList(new Customer("Adam1", "Johnson1"), new Customer("Kim1", "Smith1"),
-										new Customer("David1", "Williams1"), new Customer("Peter1", "Davis1")));
-		
-		return "Done";
-	}
-	
 	
 	
 	@RequestMapping("/setup")
@@ -90,37 +70,6 @@ public class WebController {
 		examRepo.save(new Exam("EX17", "HEAD", "1", "2/1/2018", "Freeda"));
 		
 		return "Done";
-	}
-	
-	
-	
-	@RequestMapping("/findall")
-	public String findAll(){
-		String result = "";
-		
-		for(Customer cust : repository.findAll()){
-			result += cust.toString() + "<br>";
-		}
-		
-		return result;
-	}
-	
-	@RequestMapping("/findbyid")
-	public String findById(@RequestParam("id") long id){
-		String result = "";
-		result = repository.findOne(id).toString();
-		return result;
-	}
-	
-	@RequestMapping("/findbylastname")
-	public String fetchDataByLastName(@RequestParam("lastname") String lastName){
-		String result = "";
-		
-		for(Customer cust: repository.findByLastName(lastName)){
-			result += cust.toString() + "<br>"; 
-		}
-		
-		return result;
 	}
 	
 	@RequestMapping("/findallhosp")

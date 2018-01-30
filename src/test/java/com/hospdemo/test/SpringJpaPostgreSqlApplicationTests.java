@@ -1,4 +1,4 @@
-package com.springjpa;
+package com.hospdemo.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
