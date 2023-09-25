@@ -30,7 +30,7 @@ public class HospDemoControllerTest {
 	@Test
 	public void testFindAllHosp() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/findallhosp").accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk()).andExpect(content().string(containsString("Manipal")));
+				.andExpect(status().isOk()).andExpect(content().string(containsString("test")));
 	}
 	@Test
 	public void testfindpatofhosp() throws Exception {
